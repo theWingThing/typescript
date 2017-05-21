@@ -5,8 +5,10 @@ function toggleSymbol(s: string): string {
 }
 
 function onClick(e): void {
-  e.target.innerHTML = symbol;
-  symbol = toggleSymbol(symbol);
+  if(e.target.innerHTML == "") {
+    e.target.innerHTML = symbol;
+    symbol = toggleSymbol(symbol);
+  }
 }
 
 function main(): void {
